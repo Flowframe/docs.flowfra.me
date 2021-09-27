@@ -16,6 +16,9 @@
         "laravel-mix": "^6.0.6",
         "lodash": "^4.17.19",
         "postcss": "^8.1.14",
-        "tailwindcss": "^2.2.15"
+        "tailwindcss": "^2.2.16"
+    },
+    "dependencies": {
+        "shiki": "^0.9.11"
     }
 }
