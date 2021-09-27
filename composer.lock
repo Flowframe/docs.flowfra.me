@@ -507,12 +507,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Flowframe/laravel-docs.git",
-                "reference": "ddaa50a703e7c2d5f226ff711c1ccf22293683de"
+                "reference": "61070693ae5d1345b399a7358eece179e598460c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Flowframe/laravel-docs/zipball/ddaa50a703e7c2d5f226ff711c1ccf22293683de",
-                "reference": "ddaa50a703e7c2d5f226ff711c1ccf22293683de",
+                "url": "https://api.github.com/repos/Flowframe/laravel-docs/zipball/61070693ae5d1345b399a7358eece179e598460c",
+                "reference": "61070693ae5d1345b399a7358eece179e598460c",
                 "shasum": ""
             },
             "require": {
@@ -585,7 +585,7 @@
                     "url": "https://github.com/larsklopstra"
                 }
             ],
-            "time": "2021-09-27T10:12:05+00:00"
+            "time": "2021-09-27T10:37:58+00:00"
         },
         {
             "name": "fruitcake/laravel-cors",
