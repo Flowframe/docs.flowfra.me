@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "03e82ac8dda9e48fa0bc02b593284fcc",
+    "content-hash": "b6efa6e9780e083000fb7dd9c2d14489",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -504,10 +504,16 @@
         {
             "name": "flowframe/laravel-docs",
             "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Flowframe/laravel-docs.git",
+                "reference": "ddaa50a703e7c2d5f226ff711c1ccf22293683de"
+            },
             "dist": {
-                "type": "path",
-                "url": "packages/laravel-docs",
-                "reference": "ba9a08d606b063852c9986cab3554829a69695a5"
+                "type": "zip",
+                "url": "https://api.github.com/repos/Flowframe/laravel-docs/zipball/ddaa50a703e7c2d5f226ff711c1ccf22293683de",
+                "reference": "ddaa50a703e7c2d5f226ff711c1ccf22293683de",
+                "shasum": ""
             },
             "require": {
                 "illuminate/contracts": "^8.37",
@@ -524,6 +530,7 @@
                 "spatie/laravel-ray": "^1.23",
                 "vimeo/psalm": "^4.8"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -568,9 +575,17 @@
                 "laravel",
                 "laravel-docs"
             ],
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "source": "https://github.com/Flowframe/laravel-docs/tree/master",
+                "issues": "https://github.com/Flowframe/laravel-docs/issues"
+            },
+            "funding": [
+                {
+                    "type": "github",
+                    "url": "https://github.com/larsklopstra"
+                }
+            ],
+            "time": "2021-09-27T10:12:05+00:00"
         },
         {
             "name": "fruitcake/laravel-cors",
