@@ -16,23 +16,9 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>{{ $title ? "{$title} | Flowframe Docs" : 'Flowframe Docs' }}</title>
+    <x-seo::meta />
 
-    <link
-        rel="preconnect"
-        href="https://fonts.googleapis.com"
-    >
-
-    <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin
-    >
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500&family=Space+Grotesk:wght@700&display=swap"
-        rel="stylesheet"
-    >
+    @googlefonts
 
     <link
         rel="stylesheet"
