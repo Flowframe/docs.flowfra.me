@@ -1,8 +1,8 @@
-<x-html title="Repositories">
-    <main class="w-full max-w-5xl mx-auto px-4 sm:px-6 md:px-8 py-8">
+<x-html>
+    <main class="w-full max-w-5xl px-4 py-8 mx-auto sm:px-6 md:px-8">
         <h1 class="text-3xl font-bold">Repositories</h1>
 
-        <ul class="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <ul class="grid gap-4 mt-8 md:grid-cols-2 lg:grid-cols-3">
             @foreach ($repositories as $repository)
                 <li class="p-4 rounded-lg bg-gray-50">
                     <p class="text-xs font-medium uppercase">{{ $repository->language }}</p>
@@ -16,11 +16,11 @@
                     <a
                         href="{{ "{$repository->url}/blob/master/LICENSE.md" }}"
                         target="_blank"
-                        class="items-center space-x-2 mt-3 inline-flex text-blue-800"
+                        class="inline-flex items-center mt-3 space-x-2 text-blue-800"
                     >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            class="h-5 w-5"
+                            class="w-5 h-5"
                             viewBox="0 0 20 20"
                             fill="currentColor"
                         >

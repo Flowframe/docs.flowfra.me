@@ -1,5 +1,3 @@
-@props(['title' => false])
-
 <!DOCTYPE html>
 <html lang="en">
 

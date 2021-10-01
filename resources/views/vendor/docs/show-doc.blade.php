@@ -1,27 +1,27 @@
-<x-html :title="$doc->title">
-    <div class="w-full max-w-7xl mx-auto flex">
+<x-html>
+    <div class="flex w-full mx-auto max-w-7xl">
         <aside
             x-data
             x-bind:class="{
                 'translate-x-0': $store.menu.open,
                 '-translate-x-full': ! $store.menu.open,
             }"
-            class="w-64 border-r flex-shrink-0 h-screen lg:translate-x-0 flex flex-col fixed lg:sticky top-0 z-20 transition bg-white -translate-x-full"
+            class="fixed top-0 z-20 flex flex-col flex-shrink-0 w-64 h-screen transition -translate-x-full bg-white border-r lg:translate-x-0 lg:sticky"
         >
-            <header class="bg-gradient-to-l from-gray-200 pb-px w-full">
-                <div class="h-16 bg-white flex items-center px-4">
+            <header class="w-full pb-px bg-gradient-to-l from-gray-200">
+                <div class="flex items-center h-16 px-4 bg-white">
                     <a
-                        class="font-bold text-lg font-heading"
+                        class="text-lg font-bold font-heading"
                         href="{{ route('repositories') }}"
                     >Flowframe</a>
                 </div>
             </header>
 
-            <nav class="flex-1 overflow-y-auto p-4 sm:py-6 md:py-8">
+            <nav class="flex-1 p-4 overflow-y-auto sm:py-6 md:py-8">
                 <ul class="space-y-6">
                     @foreach ($categories as $categoryTitle => $categoryDocs)
                         <li>
-                            <h2 class="text-sm text-gray-500 font-bold font-heading">
+                            <h2 class="text-sm font-bold text-gray-500 font-heading">
                                 {{ $categoryTitle }}
                             </h2>
 
@@ -29,7 +29,7 @@
                                 @foreach ($categoryDocs as $categoryDoc)
                                     <li>
                                         <a
-                                            class="inline-block px-2 py-1 rounded-lg text-gray-600 hover:bg-gray-50"
+                                            class="inline-block px-2 py-1 text-gray-600 rounded-lg hover:bg-gray-50"
                                             href="{{ route('repositories.doc', [$repository->name, $categoryDoc->slug]) }}"
                                         >
                                             {{ $categoryDoc->title }}
@@ -44,9 +44,9 @@
         </aside>
 
         <div class="flex-grow min-w-0">
-            <header class="bg-gradient-to-r from-gray-200 pb-px w-full sticky top-0 z-10">
-                <div class="px-4 sm:px-6 md:px-8 h-16 bg-white flex items-center justify-between">
-                    <p class="font-bold text-lg font-heading">{{ $repository->name }}</p>
+            <header class="sticky top-0 z-10 w-full pb-px bg-gradient-to-r from-gray-200">
+                <div class="flex items-center justify-between h-16 px-4 bg-white sm:px-6 md:px-8">
+                    <p class="text-lg font-bold font-heading">{{ $repository->name }}</p>
 
                     <a
                         title="Open repository in GitHub"
@@ -69,14 +69,14 @@
             </header>
 
             <main class="p-4 sm:p-6 md:p-8">
-                <h1 class="text-3xl lg:text-4xl font-bold tracking-tight font-heading">{{ $doc->title }}</h1>
+                <h1 class="text-3xl font-bold tracking-tight lg:text-4xl font-heading">{{ $doc->title }}</h1>
 
                 <x-markdown
                     class="mt-8 prose"
                     theme="github-dark"
                 >{!! $doc->content !!}</x-markdown>
 
-                <footer class="mt-8 border-t pt-4">
+                <footer class="pt-4 mt-8 border-t">
                     <a
                         class="text-sm text-gray-500"
                         target="_blank"
@@ -90,19 +90,19 @@
     <div
         x-data
         x-show="$store.menu.open"
-        class="fixed inset-0 bg-black/50 z-10 lg:hidden"
+        class="fixed inset-0 z-10 bg-black/50 lg:hidden"
         x-on:click="$store.menu.open = false"
         x-transition.opacity
     ></div>
 
     <button
-        class="fixed bottom-0 right-0 m-3 bg-gray-900 z-30 text-white shadow-md w-14 h-14 rounded-full flex items-center justify-center lg:hidden"
+        class="fixed bottom-0 right-0 z-30 flex items-center justify-center m-3 text-white bg-gray-900 rounded-full shadow-md w-14 h-14 lg:hidden"
         x-data
         x-on:click="$store.menu.open = !$store.menu.open"
     >
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="h-6 w-6"
+            class="w-6 h-6"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
